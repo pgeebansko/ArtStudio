@@ -1,0 +1,29 @@
+{% extends 'main/menu.html' %}
+{% block content %}
+{% load static %}
+
+  <!-- portfolio section -->
+  <section class="portfolio_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Галерия
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        {% for picture in pictures %}
+        <div class="col-md-4">
+          <div class="box b-1">
+            <img src="{{ picture.picture.url }}" alt="" />
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- end portfolio section -->
+
+
+{% endblock %}

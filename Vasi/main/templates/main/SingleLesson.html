@@ -1,0 +1,65 @@
+{% extends 'main/menu.html' %}
+{% block content %}
+{% load static %}
+  <!-- client section -->
+  <section class="client_section layout_padding-bottom">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Уроци
+        </h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="carouselExample2Controls" class="carousel slide" >
+        <div class="carousel-inner">
+          {% for it in items %}
+          {% if it.order == 1 %}
+          <div class="carousel-item active">
+          {% else %}
+          <div class="carousel-item">
+          {% endif %}
+            <div class="client_container layout_padding2">
+              <div class="client_box b-1">
+                <div class="client-id">
+                  <div class="name">
+                    <h5>
+                      Стъпка {{ it.order }}
+                    </h5>
+                    <hr>
+                  </div>
+                </div>
+                <div class="detail">
+                  <div class="row">
+                    <div class="col-4"
+                      <p>
+                        {{it.title}}
+                      </p>
+                    </div>
+                    <div class="col-2">
+                    </div>
+                    <div class="col-6">
+                      <div class="img-box">
+                        <img src="{{ it.picture.url }}" alt="" class="d-block w-300" style="height: 400px;"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+{% endblock %}

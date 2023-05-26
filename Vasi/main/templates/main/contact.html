@@ -1,0 +1,43 @@
+{% extends 'main/menu.html' %}
+{% block content %}
+{% load static %}
+
+  <!-- contact section -->
+
+  <section class="contact_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
+          <h2 class="custom_heading">Свържете се с нас</h2>
+          <form action="#">
+            <div>
+              <input type="text" placeholder="име" />
+            </div>
+            <div>
+              <input type="email" placeholder="email" />
+            </div>
+            <div>
+              <input type="text" placeholder="телефон" />
+            </div>
+            <div>
+              <input type="text" class="message-box" placeholder="Съобщение" />
+            </div>
+            <div class="d-flex  mt-4 ">
+              <button>
+                ИЗПРАТИ
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="{% static 'images/contact.jpg' %}" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+{% endblock %}

@@ -36,6 +36,18 @@ def gallery(request):
     return render(request, 'main/gallery.html', context)
 
 
+# *****************************************************************
+# страница за галерия VASI
+def galleryVasi(request):
+    pictures = Picture.objects.order_by('order').filter(author='Васи')
+    context = {
+        'pictures': pictures,
+    }
+    return render(request, 'main/gallery.html', context)
+# *****************************************************************
+
+
 # страница за контакти.
 def contact(request):
     return render(request, 'main/contact.html')
+

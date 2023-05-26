@@ -8,7 +8,9 @@ urlpatterns = [
     path('lessons', views.LessonsList.as_view(), name='lessons_page'),
     path('lesson/<int:pk>/', views.SingleLesson.as_view()),
     path('gallery', views.gallery, name='gallery_page'),
+    # -----------------------------------
     path('galleryVasi', views.galleryVasi, name='gallery_page2'),
+    # ----------------------------------
     path('contact', views.contact, name='contact_page'),
 ]
 
